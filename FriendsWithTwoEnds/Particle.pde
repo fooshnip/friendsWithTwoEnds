@@ -7,14 +7,14 @@ class Particle extends VerletParticle2D{
     super(loc);
     size = 16;
     r = 5;
-    physics.addBehavior(new AttractionBehavior(this, 60, -20));
+    physics.addBehavior(new AttractionBehavior2D(this, 60, -20));
   }
   
   Particle(Vec2D loc, int _size){
     super(loc);
     size = _size;
     r = 5;
-    physics.addBehavior(new AttractionBehavior(this, 60, -20));
+    physics.addBehavior(new AttractionBehavior2D(this, 60, -20));
   }
   
   void display(){

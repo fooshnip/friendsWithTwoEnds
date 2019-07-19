@@ -1,3 +1,4 @@
+
 import controlP5.*;
 import toxi.physics2d.*;
 import toxi.physics2d.behaviors.*;
@@ -52,11 +53,11 @@ void setup(){
   physics = new VerletPhysics2D();
   margin = 50;
   physics.setWorldBounds(new Rect(margin,2*margin,width-(2*margin),height-(3*margin)));
-  physics.addBehavior(new GravityBehavior(new Vec2D(0,0)));
+  physics.addBehavior(new GravityBehavior2D(new Vec2D(0,0)));
   physics.setDrag(0.15);
 
   ball = new Particle(new Vec2D(width/2,height/2+margin),50);
-  physics.addBehavior(new AttractionBehavior(ball,20,-0.0001));
+  physics.addBehavior(new AttractionBehavior2D(ball,20,-0.0001));
   //ball.setWeight(1);
   physics.addParticle(ball);
   
